@@ -22,7 +22,7 @@ pipeline {
                 echo sh(script: 'env|sort', returnStdout: true)
             }
         }
-
+/*
         stage('Sock') {
 
             agent {
@@ -36,6 +36,7 @@ pipeline {
                 sh  ''' echo 'hajsaks' '''
             }
         }
+*/
     }
     post {
 
