@@ -26,7 +26,7 @@ pipeline {
         stage('Sock') {
 
             agent {
-                dockerfile{
+                dockerfile {
                     args '-u root:root -v /var/run/docker.sock:/var/run/docker.sock'
                 }
             }
