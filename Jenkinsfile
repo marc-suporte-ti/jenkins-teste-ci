@@ -5,14 +5,15 @@ pipeline {
     environment {
         COMPOSE_PROJECT_NAME = "${env.JOB_NAME}-${env.BUILD_ID}"
     }
-    
     stages {
       
         stage('Echo') {
 
             agent {
                 dockerfile {
-
+                    // alwaysPull false
+                    // image 'microsoft/dotnet:2.2-sdk'
+                    // reuseNode false
                     args '-u root:root'
                 }
             }
@@ -20,9 +21,12 @@ pipeline {
             steps {
                 
                 echo sh(script: 'env|sort', returnStdout: true)
+
             }
+
         }
-/*
+
+
         stage('Sock') {
 
             agent {
@@ -33,10 +37,14 @@ pipeline {
 
             steps {
 
-                sh  ''' echo 'hajsaks' '''
+
+                     sh  ''' echo 'hajsaks' '''
+                
             }
+
         }
-*/
+
+ 
     }
     post {
 
