@@ -1,1 +1,1 @@
-FROM marcioalmeidarosa/routetroubleshootingapi:2.0
+FROM marcioalmeidarosa/routetroubleshootingapi
